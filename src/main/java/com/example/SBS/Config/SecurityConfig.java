@@ -36,7 +36,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/admins/create","/api/admins/login","/api/customers/login","/api/contact").permitAll() // Allow unauthenticated access to create admin
                         .requestMatchers("/api/customers/**").hasAnyRole("ADMIN", "CUSTOMER") // Allow both ADMIN and CUSTOMER roles
                         .requestMatchers("/api/admins/**").permitAll()
-                        .requestMatchers("/", "/index.html","/AdminDashboard.html","/customerDashboard.html","/welcome.html","/services.html","/contact.html").permitAll()
+                        .requestMatchers("/", "/index.html","/AdminDashboard.html","/CustomerDashboard.html","/welcome.html","/services.html","/contact.html").permitAll()
                         //added for testing purpose
                         .requestMatchers("/images/**", "/css/**", "/js/**", "/static/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/customers/create").hasRole("ADMIN")
