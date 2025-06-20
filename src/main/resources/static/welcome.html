@@ -955,7 +955,7 @@
         loginBtn.disabled = true;
 
         if (role === "admin") {
-            fetch("http://localhost:8080/api/admins/login", {
+            fetch("https://vault-cs0j.onrender.com/api/admins/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password })
@@ -990,7 +990,7 @@
                 }, 1000);
             });
         } else if (role === "customer") {
-            fetch("http://localhost:8080/api/customers/login", {
+            fetch("https://vault-cs0j.onrender.com/api/customers/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ phoneNumber: username, password })
@@ -1015,7 +1015,7 @@
 
                     loginCard.classList.add('animate__animated', 'animate__zoomOut');
 
-                    setTimeout(() => window.location.href = "customerDashboard.html", 1500);
+                    setTimeout(() => window.location.href = "CustomerDashboard.html", 1500);
                 } else {
                     throw new Error("Invalid credentials");
                 }
