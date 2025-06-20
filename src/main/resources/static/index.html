@@ -411,7 +411,7 @@
       loginBtn.disabled = true;
 
       if (role === "admin") {
-        fetch("http://localhost:8080/api/admins/login", {
+        fetch("http://vault-cs0j.onrender.com/api/admins/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username, password })
@@ -448,7 +448,7 @@
         });
 
       } else if (role === "customer") {
-        fetch("http://localhost:8080/api/customers/login", {
+        fetch("http://vault-cs0j.onrender.com/api/customers/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ phoneNumber: username, password })
